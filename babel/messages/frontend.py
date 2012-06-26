@@ -134,7 +134,7 @@ class compile_catalog(Command):
 
         for idx, (locale, po_file) in enumerate(po_files):
             mo_file = mo_files[idx]
-            infile = open(po_file, 'r')
+            infile = open(po_file, 'rb')
             try:
                 catalog = read_po(infile, locale)
             finally:
